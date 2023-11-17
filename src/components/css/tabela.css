@@ -1,0 +1,487 @@
+/* ------------ fonts ------------ */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&family=Roboto:wght@400;900&display=swap");
+
+/* variaveis de cores */
+:root {
+  /* --laranja: #ff4200; */
+  --laranja: rgb(255, 68, 0, 1);
+  --cinza: #212121;
+  --cinza-claro: #585858;
+  /* --amareloclaro: #FFF0D2; */
+  --branco: #fff;
+  /* --corimgheader:rgba(255, 66, 0, 0.2) 86.28%; */
+  --corimgheader: rgba(255, 66, 0, 0.2);
+  --cinza-branco: #a0a0a0;
+}
+
+.laranja {
+  color: var(--laranja);
+}
+
+.cinza {
+  color: var(--cinza);
+}
+
+.cinza-claro {
+  color: var(--cinza-claro);
+}
+
+/* ------------ reset ------------ */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* ------------ sistema de grid com 12 colunas ------------ */
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.container-fluid {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.row > * {
+  flex: 1; /* allow children to grow when space available */
+
+  /* [OPTIONAL] set a 'min-width' if you want to force some wrapping */
+  min-width: 7.5rem; /* max 3*120px columns on a 360px device */
+}
+
+[class*="col-"] {
+  padding: 10px;
+}
+
+.col-1 {
+  flex-basis: 8.33%;
+}
+.col-2 {
+  flex-basis: 16.66%;
+}
+.col-3 {
+  flex-basis: 25%;
+}
+.col-4 {
+  flex-basis: 33.33%;
+}
+.col-5 {
+  flex-basis: 41.66%;
+}
+.col-6 {
+  flex-basis: 50%;
+}
+.col-7 {
+  flex-basis: 58.33%;
+}
+.col-8 {
+  flex-basis: 66.66%;
+}
+.col-9 {
+  flex-basis: 75%;
+}
+.col-10 {
+  flex-basis: 83.33%;
+}
+.col-11 {
+  flex-basis: 91.66%;
+}
+.col-12 {
+  flex-basis: 100%;
+}
+
+/* ----------------- header -------------------- */
+header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px;
+  background-color: var(--cinza);
+  color: #fff;
+  height: 70px;
+  z-index: 1000;
+}
+
+header .logo {
+  font-size: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+header .navbar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .navbar a {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 05px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+header .navbar a:hover,
+.active {
+  background: #2c3e50;
+}
+
+header .btn {
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 991px) {
+  header {
+    padding: 10px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  header .btn {
+    display: block;
+  }
+
+  header .navbar {
+    position: fixed;
+    flex-direction: column;
+    min-width: 300px;
+    background-color: var(--cinza);
+    top: 0;
+    right: -100%;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 10rem;
+  }
+
+  header .navbar.active2 {
+    right: 0;
+  }
+
+  header .navbar .close-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 25px;
+  }
+
+  header .navbar a {
+    display: block;
+    font-size: 20px;
+    margin: 15px;
+    padding: 0.5rem 15px;
+  }
+
+  header .navbar a:hover {
+    background: #21293a;
+    color: #fff;
+  }
+
+  header .logo {
+    font-size: 25px;
+    font-weight: 500;
+  }
+}
+
+/*  ----------------- section inicio ------------------- */
+
+.inicio {
+  /* height: 100vh;*/
+  width: 100%;
+  padding: 400px 20px;
+  /* background: linear-gradient(89.9deg, rgba(33, 33, 33, 0.2) 47.8%, rgba(255, 66, 0, 0.2) 86.28%), url(img/header.jpg) no-repeat center; */
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.inicio .container h2 {
+  color: var(--branco);
+  font-size: 28px;
+}
+
+.inicio .container h1 {
+  color: var(--laranja);
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.inicio .container a {
+  display: inline-block;
+  background-color: var(--cinza);
+  color: var(--branco);
+  padding: 20px 30px;
+  font-size: 22px;
+  text-decoration: none;
+  border-radius: 12px;
+}
+
+.inicio .container a:hover {
+  background-color: var(--laranja);
+  color: var(--branco);
+  transition: 0.3s;
+}
+
+/* ------------- section sobre --------------- */
+
+.sobre-conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.sobre-conteudo p {
+  margin-bottom: 20px;
+}
+
+.sobre-conteudo span {
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.h1-principal-laranja {
+  margin: 80px 0 60px 0;
+  font-size: 32px;
+  color: var(--laranja);
+  text-align: center;
+}
+
+/* ------------ section informações --------------------- */
+
+#informacoes {
+  background-color: var(--laranja);
+  color: var(--cinza);
+  position: relative;
+  margin-top: -20px;
+  /* z-index: 100; */
+  padding: 80px 0;
+}
+
+.h1-principal-branco {
+  margin-bottom: 40px;
+  font-size: 32px;
+  color: var(--branco);
+  text-align: center;
+  border: 2px solid white;
+  padding: 10px;
+}
+
+h3 {
+  margin-bottom: 40px;
+  font-size: 25px;
+  color: var(--branco);
+  text-align: center;
+}
+
+/* tabela.css */
+
+.treino-tabela {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+  overflow-x: auto;
+}
+
+.treino-tabela th,
+.treino-tabela td {
+  padding: 1px;
+  text-align: center;
+  border-bottom: 5px solid #acbc31;
+}
+th{
+  margin-left: 50px;
+}
+.treino-dia {
+  background-color: #f9f9f9;
+  margin-top: 20px;
+}
+
+.treino-dia h3 {
+  margin-bottom: 20px;
+}
+
+.treino-campos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.treino-campos label {
+  width: 10px;
+  font-weight: bold;
+  
+}
+
+.treino-campos input,
+.treino-campos span {
+  width: calc(20% - 22px); /* Ajuste para melhor lidar com a largura e a margem do input */
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+}
+
+.treino-botoes {
+  margin-top: 10px;
+}
+
+.treino-botoes button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.treino-botoes button:hover {
+  background-color: #45a049;
+}
+
+/* Estilos para telas menores */
+@media screen and (max-width: 768px) {
+  .treino-tabela {
+    overflow-x: auto;
+  }
+
+  .treino-tabela th,
+  .treino-tabela td {
+    font-size: 14px;
+  }
+
+  .treino-campos label {
+    width: 100%; /* Largura total para telas menores */
+  }
+
+  .treino-campos input,
+  .treino-campos span {
+    width: calc(10% - 18px); /* Ajuste para melhor lidar com a largura e a margem do input */
+  }
+}
+
+/* ------------ Rodapé --------------------- */
+
+footer {
+  background-color: var(--cinza);
+  padding: 30px;
+  color: #fff;
+}
+
+/* ----------------------- responsividade --------------- */
+/* ------------ tablet ------------ */
+@media (max-width: 977px) {
+  .tabelasobre {
+    text-align: center;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .inicio {
+    background-size: 100% 100%;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  #sobre .row {
+    flex-direction: column-reverse;
+  }
+}
+
+/* ------------ celular ------------ */
+@media (max-width: 700px) {
+  .tabelasobre {
+    text-align: center;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .inicio {
+    background-size: 100% 100%;
+  }
+
+  /* menu */
+  .menuprincipal h1 {
+    font-size: 20px;
+  }
+
+  .menuprincipal .container {
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 30px;
+  }
+
+  .menuprincipal ul li a {
+    font-size: 18px;
+  }
+
+  /* header inicio */
+
+  .inicio {
+    padding: 250px 20px;
+  }
+
+  .inicio .container h2 {
+    font-size: 22px;
+  }
+
+  .inicio .container h1 {
+    font-size: 38px;
+  }
+
+  .inicio .container a {
+    font-size: 22px;
+  }
+
+  /* informacoes */
+
+  #informacoes .row {
+    flex-direction: column;
+  }
+}
+p {
+  align-items: center;
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  /* Estilos para dispositivos móveis */
+  .tabelacor,
+  .tabelacor2,
+  .h1-principal-branco {
+    margin: 10px;
+  }
+}

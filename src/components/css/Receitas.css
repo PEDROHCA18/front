@@ -1,0 +1,312 @@
+/* ------------ fonts ------------ */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&family=Roboto:wght@400;900&display=swap");
+
+/* variaveis de cores */
+:root {
+  /* --laranja: #ff4200; */
+  --laranja: rgb(255, 68, 0, 1);
+  --cinza: #212121;
+  --cinza-claro: #585858;
+  /* --amareloclaro: #FFF0D2; */
+  --branco: #fff;
+  /* --corimgheader:rgba(255, 66, 0, 0.2) 86.28%; */
+  --corimgheader: rgba(255, 66, 0, 0.2);
+}
+
+.laranja {
+  color: var(--laranja);
+}
+
+.cinza {
+  color: var(--cinza);
+}
+
+.cinza-claro {
+  color: var(--cinza-claro);
+}
+
+/* ------------ reset ------------ */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* ------------ sistema de grid com 12 colunas ------------ */
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.container-fluid {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.row > * {
+  flex: 1; /* allow children to grow when space available */
+
+  /* [OPTIONAL] set a 'min-width' if you want to force some wrapping */
+  min-width: 7.5rem; /* max 3*120px columns on a 360px device */
+}
+
+[class*="col-"] {
+  padding: 10px;
+}
+
+.col-1 {
+  flex-basis: 8.33%;
+}
+.col-2 {
+  flex-basis: 16.66%;
+}
+.col-3 {
+  flex-basis: 25%;
+}
+.col-4 {
+  flex-basis: 33.33%;
+}
+.col-5 {
+  flex-basis: 41.66%;
+}
+.col-6 {
+  flex-basis: 50%;
+}
+.col-7 {
+  flex-basis: 58.33%;
+}
+.col-8 {
+  flex-basis: 66.66%;
+}
+.col-9 {
+  flex-basis: 75%;
+}
+.col-10 {
+  flex-basis: 83.33%;
+}
+.col-11 {
+  flex-basis: 91.66%;
+}
+.col-12 {
+  flex-basis: 100%;
+}
+
+/* ----------------- header -------------------- */
+
+/*  ----------------- section inicio ------------------- */
+
+.inicio {
+  /* height: 100vh; */
+  width: 100%;
+  padding: 300px 20px;
+  /* background: linear-gradient(89.9deg, rgba(33, 33, 33, 0.2) 47.8%, rgba(255, 66, 0, 0.2) 86.28%), url(img/header.jpg) no-repeat center; */
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.inicio .container h2 {
+  color: var(--branco);
+  font-size: 28px;
+}
+
+.inicio .container h1 {
+  color: var(--laranja);
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.inicio .container a {
+  display: inline-block;
+  background-color: var(--cinza);
+  color: var(--branco);
+  padding: 20px 30px;
+  font-size: 22px;
+  text-decoration: none;
+  border-radius: 12px;
+}
+
+
+
+/* ------------- section sobre --------------- */
+
+.sobre-conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.sobre-conteudo p {
+  margin-bottom: 20px;
+}
+
+.sobre-conteudo span {
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.h1-principal-laranja {
+  margin: 80px 0 60px 0;
+  font-size: 32px;
+  color: var(--laranja);
+  text-align: center;
+}
+#informacoes {
+  background-color: var(--laranja);
+  color: var(--cinza);
+  position: relative;
+  margin-top: -20px;
+  /* z-index: 100; */
+  padding: 80px 0;
+}
+
+.h1-principal-branco {
+  margin-top: 8px;
+  font-size: 32px;
+  color: var(--branco);
+  text-align: center;
+}
+
+#informacoes .card {
+  background-color: var(--branco);
+  padding: 80px 30px;
+  text-align: center;
+  border-radius: 12px;
+  min-height: 100%;
+  margin-top: -12%;
+}
+
+#informacoes .card h1 {
+  margin: 20px 0;
+  font-size: 28px;
+  text-align: left;
+}
+
+#informacoes .card p {
+  font-size: 22px;
+  text-align: left;
+}
+
+#informacoes .card h2 {
+  margin: 20px 0;
+  text-align: left;
+}
+
+#informacoes .card img {
+  border-radius: 15px;
+}
+/* ------------ Rodapé --------------------- */
+
+footer {
+  background-color: var(--cinza);
+  padding-top: 40px;
+  padding: 30px;
+  color: #fff;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-content h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+
+.footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 17px;
+}
+
+/* ----------------------- responsividade --------------- */
+/* ------------ tablet ------------ */
+@media (max-width: 977px) {
+  .alimenta {
+    text-align: center;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+  }
+  .h1-principal-branco {
+    margin-top: -5%;
+    
+  }
+  #informacoes .card {
+  
+    margin-top: -17%;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  #sobre .row {
+    flex-direction: column-reverse;
+  }
+}
+
+/* ------------ celular ------------ */
+@media (max-width: 700px) {
+  /* header inicio */
+  .alimenta {
+    text-align: center;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+  }
+
+  .inicio {
+    padding: 250px 20px;
+  }
+  #informacoes .card {
+  
+    margin-top: -28%;
+  }
+  .inicio .container h2 {
+    font-size: 22px;
+  }
+
+  .inicio .container h1 {
+    font-size: 38px;
+  }
+
+  .inicio .container a {
+    font-size: 22px;
+  }
+
+  /* informacoes */
+
+  #informacoes .row {
+    flex-direction: column;
+  }
+}
+contatos,
+p {
+  align-items: center;
+  text-align: center;
+}

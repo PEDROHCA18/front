@@ -1,0 +1,107 @@
+/* globals.css */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+
+/* Outros estilos globais podem vir aqui */
+
+header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px;
+  background-color: var(--cinza);
+  color: #fff;
+  height: 70px;
+  z-index: 1000;
+}
+
+header .logo {
+  font-size: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+header .navbar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .navbar a {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 05px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+header .navbar a:hover,
+.active {
+  background: #2c3e50;
+}
+
+header .btn {
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 991px) {
+  header {
+    padding: 10px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  header .btn {
+    display: block;
+  }
+
+  header .navbar {
+    position: fixed;
+    flex-direction: column;
+    min-width: 300px;
+    background-color: var(--cinza);
+    top: 0;
+    right: -100%;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 10rem;
+  }
+
+  header .navbar.active2 {
+    right: 0;
+  }
+
+  header .navbar .close-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 25px;
+  }
+
+  header .navbar a {
+    display: block;
+    font-size: 20px;
+    margin: 15px;
+    padding: 0.5rem 15px;
+  }
+
+  header .navbar a:hover {
+    background: #21293a;
+    color: #fff;
+  }
+
+  header .logo {
+    font-size: 25px;
+    font-weight: 500;
+  }
+}
